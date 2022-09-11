@@ -1,0 +1,38 @@
+    /*
+     * C program to accept N numbers and arrange them in an ascending order
+     */
+ 
+    #include <stdio.h>
+    int main()
+    {
+ 
+        int i, j, a, n, number[30];
+        printf("Enter the value of N \n");
+        scanf("%d", &n);
+ 
+        printf("Enter the numbers \n");
+        for (i = 0; i < 10; ++i)
+            scanf("%d", &number[i]);
+ 
+        for (i = 0; i < 10; ++i) 
+        {
+ 
+            for (j = i + 1; j < 10; ++j)
+            {
+ 
+                if (number[i] > number[j]) 
+                {
+ 
+                    a =  number[i];
+                    number[i] = number[j];
+                    number[j] = a;
+ 
+                }
+ 
+            }
+ 
+        }
+        printf("Second largest number is\n");
+        printf("%d",number[8]);
+}
+    
